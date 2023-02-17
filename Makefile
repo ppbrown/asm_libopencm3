@@ -55,6 +55,15 @@ STYLECHECKFILES := $(wildcard include/*/*.h include/*/*/*.h include/*/*/*/*.h)
 STYLECHECKFILES += $(wildcard lib/*/*.h lib/*/*/*.h lib/*/*/*/*.h)
 STYLECHECKFILES += $(wildcard lib/*/*.c lib/*/*/*.c lib/*/*/*/*.c)
 
+
+default:
+	@echo "You probably want to do 'make build'"
+	@echo "However you also probably want to narrow down the selection of TARGETS="
+	@echo ""
+	@echo Otherwise, you will build for all of the following:
+	@echo ""
+	@echo TARGETS=$(TARGETS)
+
 all: build
 
 build: lib
